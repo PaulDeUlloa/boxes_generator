@@ -13,7 +13,7 @@ const Form = (props) => {
 
     return(
         <div className="App">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="form d-flex justify-content-center align-items-center">
                 <div>
                     <div>
                         <div>Color: </div>
