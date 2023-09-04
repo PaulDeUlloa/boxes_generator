@@ -2,13 +2,13 @@ import { useState } from "react";
 
 const Form = (props) => {
     const [color, setBoxColor] = useState("");
-    const [size, setSize] = useState(125);
+    const [size, setSize] = useState(200);
 
     const handleSubmit = (e) => {
         e.preventDefault();
         props.getBoxData({ color: color, size: parseInt(size) });
         setBoxColor("");
-        setSize(125);
+        setSize(200);
     };
 
     return(
@@ -16,7 +16,7 @@ const Form = (props) => {
             <form onSubmit={handleSubmit}>
                 <div>
                     <div>
-                        <div>Color</div>
+                        <div>Color: </div>
                         <div>
                             <input 
                                 className ="form-control"
@@ -27,7 +27,7 @@ const Form = (props) => {
                         </div>
                     </div>
                     <div>
-                        <div>Size (px)</div>
+                        <div>Size(px): </div>
                         <div>
                             <input 
                                 className ="form-control"
